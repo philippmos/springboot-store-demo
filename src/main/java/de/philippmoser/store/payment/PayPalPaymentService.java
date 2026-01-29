@@ -1,4 +1,4 @@
-package de.philippmoser.store;
+package de.philippmoser.store.payment;
 
 import org.springframework.stereotype.Service;
 

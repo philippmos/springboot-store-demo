@@ -1,5 +1,6 @@
 package de.philippmoser.store;
 
+import de.philippmoser.store.payment.PaymentService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 

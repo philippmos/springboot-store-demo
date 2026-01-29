@@ -1,4 +1,4 @@
-package de.philippmoser.store;
+package de.philippmoser.store.payment;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
