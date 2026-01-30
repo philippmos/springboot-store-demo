@@ -2,8 +2,10 @@ package de.philippmoser.store.payment;
 
 import org.springframework.stereotype.Service;
 
-@Service("paypal")
+// @Service("paypal")
 public class PayPalPaymentService implements PaymentService {
+
+    public static String providerName = "stripe";
 
     @Override
     public void processPayment(double amount) {
