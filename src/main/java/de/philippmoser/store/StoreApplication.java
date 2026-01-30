@@ -11,6 +11,7 @@ public class StoreApplication {
         var context = SpringApplication.run(StoreApplication.class, args);
 
         var orderService = context.getBean(OrderService.class);
+        var orderService2 = context.getBean(OrderService.class);
         orderService.placeOrder();
 
         var notificationManager = context.getBean(NotificationManager.class);

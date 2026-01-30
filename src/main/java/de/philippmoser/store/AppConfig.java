@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
@@ -26,6 +27,7 @@ public class AppConfig {
 
     @Bean
     @Lazy
+    @Scope("prototype")
     public OrderService orderService() {
 
         if (paymentProvider.equals(StripePaymentService.providerName)) {
