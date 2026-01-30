@@ -1,8 +1,6 @@
 package de.philippmoser.store.payment;
 
-import org.springframework.stereotype.Service;
 
-// @Service("paypal")
 public class PayPalPaymentService implements PaymentService {
 
     public static String providerName = "stripe";

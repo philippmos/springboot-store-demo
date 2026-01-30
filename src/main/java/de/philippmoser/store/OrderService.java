@@ -1,17 +1,27 @@
 package de.philippmoser.store;
 
 import de.philippmoser.store.payment.PaymentService;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
-// @Service
+
 public class OrderService {
 
     private final PaymentService paymentService;
 
-    public OrderService(/*@Qualifier("stripe")*/ PaymentService paymentService) {
+    public OrderService(PaymentService paymentService) {
         this.paymentService = paymentService;
         System.out.println("OrderService created");
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("PostConstruct");
+    }
+
+    @PreDestroy
+    public void cleanup() {
+        System.out.println("OrderService PreDestroy");
     }
 
     public void placeOrder() {

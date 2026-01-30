@@ -16,6 +16,8 @@ public class StoreApplication {
 
         var notificationManager = context.getBean(NotificationManager.class);
         notificationManager.sendNotification("Test Notification");
+
+        context.close();
     }
 
 }
