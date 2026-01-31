@@ -67,6 +67,17 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>12.0.0</version>
+                <configuration>
+                    <url>jdbc:mysql://localhost:3306/storedb?createDatabaseIfNotExist=true</url>
+                    <user>storeuser</user>
+                    <password>storepassword</password>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
