@@ -7,10 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StoreApplication {
+public class BasicApplication {
 
     public static void main(String[] args) {
-        var context = SpringApplication.run(StoreApplication.class, args);
+        var context = SpringApplication.run(BasicApplication.class, args);
 
         var user = User.builder()
                         .name("John")
