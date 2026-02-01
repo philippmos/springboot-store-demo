@@ -25,6 +25,9 @@ public class StoreApplication {
 
         user.addAddress(address);
 
+
+        user.addTag("Tag 1");
+
         System.out.println(user);
     }
 }
