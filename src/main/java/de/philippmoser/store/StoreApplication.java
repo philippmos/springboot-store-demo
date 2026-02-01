@@ -1,8 +1,8 @@
 package de.philippmoser.store;
 
-import de.philippmoser.store.entities.Address;
-import de.philippmoser.store.entities.Profile;
-import de.philippmoser.store.entities.User;
+import de.philippmoser.store.entities.user.Address;
+import de.philippmoser.store.entities.user.Profile;
+import de.philippmoser.store.entities.user.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,4 +1,4 @@
-package de.philippmoser.store.entities;
+package de.philippmoser.store.entities.user;
 
 import jakarta.persistence.*;
 import lombok.*;
