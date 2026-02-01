@@ -1,4 +1,4 @@
-name: api maven project
+name: api
 
 on:
   push:
