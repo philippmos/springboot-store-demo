@@ -1,7 +1,7 @@
 package de.philippmos.store.controllers;
 
 import de.philippmos.store.dtos.UserDto;
-import de.philippmos.store.entities.User;
+import de.philippmos.store.mappers.UserMapper;
 import de.philippmos.store.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,13 +17,15 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
     private final UserRepository userRepository;
+    private final UserMapper userMapper;
 
     @GetMapping
     public Iterable<UserDto> getAllUsers() {
         return userRepository
                 .findAll()
                 .stream()
-                .map(user -> new UserDto(user.getId(), user.getName(), user.getEmail())).toList();
+                .map(userMapper::toDto)
+                .toList();
     }
 
     @GetMapping("/{id}")
@@ -34,7 +36,6 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
 
-        var userDto = new UserDto(user.getId(), user.getName(), user.getEmail());
-        return ResponseEntity.ok(userDto);
+        return ResponseEntity.ok(userMapper.toDto(user));
     }
 }
