@@ -1,0 +1,28 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{appUrl}}/users
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-auth-token: 1234
+}
+
+body:json {
+  {
+    "name": "superuser",
+    "email": "super@user.com",
+    "password": "superSecret123!"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
